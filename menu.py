@@ -32,3 +32,12 @@ while True:
         else:
             for i, p in enumerate(personas, start=1):
                 print(f"{i}. {p}")
+
+                
+    elif opcion == "3":
+        print("\nSaliendo del programa...")
+        break
+
+    else:
+        print("Opción no válida.")
+            
