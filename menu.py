@@ -56,6 +56,38 @@ while True:
             print("No existe ninguna persona con esa identificación.")
 
     
+    elif opcion == "4":
+        print("\n--- Modificar persona ---")
+        ident = input("Ingrese la identificación de la persona a modificar: ")
 
+        persona_encontrada = None
+
+        for p in personas:
+            if p.getIdentificacion() == ident:
+                persona_encontrada = p
+                break
+
+        if persona_encontrada:
+            print("\nDeje vacío el campo que NO desee cambiar:")
+
+            nuevo_nombre = input("Nuevo nombre: ")
+            if nuevo_nombre != "":
+                persona_encontrada.setNombre(nuevo_nombre)
+
+            nuevo_apellido = input("Nuevo apellido: ")
+            if nuevo_apellido != "":
+                persona_encontrada.setApellido(nuevo_apellido)
+
+            nueva_edad = input("Nueva edad: ")
+            if nueva_edad != "":
+                persona_encontrada.setEdad(int(nueva_edad))
+
+            nuevo_correo = input("Nuevo correo: ")
+            if nuevo_correo != "":
+                persona_encontrada.setCorreo(nuevo_correo)
+
+            print("Persona modificada correctamente.")
+        else:
+            print("No existe ninguna persona con esa identificación.")
 
             
