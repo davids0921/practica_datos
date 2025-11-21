@@ -38,6 +38,16 @@ class Persona:
     def getCorreo(self):
         return self.correo
 
+ 
+    def consultarPersona(self):
+        return {
+            "identificacion": self.identificacion,
+            "nombre": self.nombre,
+            "apellido": self.apellido,
+            "edad": self.edad,
+            "correo": self.correo
+        }
+
     def __str__(self):
         return (f"ID: {self.identificacion}, "
                 f"Nombre: {self.nombre} {self.apellido}, "

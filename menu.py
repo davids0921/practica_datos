@@ -6,10 +6,14 @@ while True:
     print("\n==== MENU PERSONAS (SET/GET) ====")
     print("1. Crear persona")
     print("2. Mostrar lista de personas")
-    print("3. Salir")
+    print("3. Consultar persona")
+    print("4. Modificar persona")
+    print("5. Eliminar persona")
+    print("6. Salir")
 
     opcion = input("Elige una opción: ")
 
+ 
     if opcion == "1":
         print("\n--- Crear persona ---")
 
@@ -33,11 +37,25 @@ while True:
             for i, p in enumerate(personas, start=1):
                 print(f"{i}. {p}")
 
-                
-    elif opcion == "3":
-        print("\nSaliendo del programa...")
-        break
 
-    else:
-        print("Opción no válida.")
+    elif opcion == "3":
+        print("\n--- Consultar persona ---")
+        ident = input("Ingrese la identificación: ")
+
+        persona_encontrada = None
+
+        for p in personas:
+            if p.getIdentificacion() == ident:
+                persona_encontrada = p
+                break
+
+        if persona_encontrada:
+            print("\nPersona encontrada:")
+            print(persona_encontrada)
+        else:
+            print("No existe ninguna persona con esa identificación.")
+
+    
+
+
             
