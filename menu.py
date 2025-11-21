@@ -24,4 +24,11 @@ while True:
         personas.append(p)
         print("Persona guardada.")
 
-    
+    elif opcion == "2":
+        print("\n--- Lista de personas registradas ---")
+
+        if len(personas) == 0:
+            print("No hay personas registradas.")
+        else:
+            for i, p in enumerate(personas, start=1):
+                print(f"{i}. {p}")
