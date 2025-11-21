@@ -90,4 +90,19 @@ while True:
         else:
             print("No existe ninguna persona con esa identificación.")
 
-            
+    elif opcion == "5":
+        print("\n--- Eliminar persona ---")
+        ident = input("Ingrese la identificación de la persona a eliminar: ")
+
+        persona_encontrada = None
+
+        for p in personas:
+            if p.getIdentificacion() == ident:
+                persona_encontrada = p
+                break
+
+        if persona_encontrada:
+            personas.remove(persona_encontrada)
+            print("Persona eliminada correctamente.")
+        else:
+            print("No existe ninguna persona con esa identificación.")
